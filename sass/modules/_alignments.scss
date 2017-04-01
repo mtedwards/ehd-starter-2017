@@ -1,16 +1,20 @@
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
-}
 
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
-}
 
-.aligncenter {
+.aligncenter, .alignright, .alignleft {
 	clear: both;
 	@include center-block;
+}
+
+@include breakpoint($medium){
+	.alignleft {
+		display: inline;
+		float: left;
+		margin-right: 1.5em;
+	}
+
+	.alignright {
+		display: inline;
+		float: right;
+		margin-left: 1.5em;
+	}
 }

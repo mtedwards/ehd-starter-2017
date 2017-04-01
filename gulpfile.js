@@ -34,6 +34,7 @@ gulp.task('sass', function(){
 
 gulp.task('compress', function(){
   gulp.src([
+    'js/navigation.js',
     'js/app.js'
   ])
   .pipe(concat('production.js'))
