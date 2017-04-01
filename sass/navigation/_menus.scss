@@ -76,12 +76,16 @@
 	display: block;
 }
 
-@media screen and (min-width: 37.5em) {
+@include breakpoint($nav) {
 	.menu-toggle {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
+		display: flex;
+		justify-content: center;
+		li {
+			padding: 0 1em;
+		}
 	}
 }
 
