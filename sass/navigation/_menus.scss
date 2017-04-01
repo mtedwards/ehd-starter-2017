@@ -50,7 +50,7 @@
 	}
 
 	li {
-		float: left;
+		
 		position: relative;
 
 		&:hover > a,
@@ -74,6 +74,12 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	margin: 0 auto;
+
+	&.nav-menu li {
+		display: block;
+		text-align: center;
+	}
 }
 
 @include breakpoint($nav) {
