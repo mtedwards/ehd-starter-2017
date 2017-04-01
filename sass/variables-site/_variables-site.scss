@@ -1,0 +1,9 @@
+@import "colors";
+@import "typography";
+@import "structure";
+
+// Define Breakpoints
+
+$mobile: max-width 649px;
+$medium: 650px;
+$large: 1000px;
