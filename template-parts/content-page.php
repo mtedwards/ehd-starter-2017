@@ -18,10 +18,9 @@
 		<?php
 			the_content();
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ehd-starter' ),
-				'after'  => '</div>',
-			) );
+			if( is_page( 'resources' ) ) {
+				get_template_part( 'template-parts/content', 'resources' );
+			}
 		?>
 	</div><!-- .entry-content -->
 
