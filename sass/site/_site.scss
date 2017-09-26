@@ -4,13 +4,42 @@
   padding: 0 20px;
 }
 
+.entry-content.with-sidebar {
+  @include breakpoint($medium) {
+    .main-content {
+      width: 66%;
+      float: left;
+    }
+    .sidebar {
+      width: 30%;
+      float: right;
+    }
+    @supports(display: grid)
+    {
+      display: grid;
+      grid-template-columns: auto 300px;
+      grid-gap: 2em;
+      &:before{
+        display: none;
+      }
+      .main-content, .sidebar {
+        width: 100%;
+      }
+    }
+  }
+}
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
 @import "header";
+@import "home-header";
 @import "primary/posts-and-pages";
+
+@import "front-page";
+@import "resources";
+@import "footer";
 
 /*--------------------------------------------------------------
 ## Comments

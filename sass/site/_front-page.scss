@@ -1,0 +1,52 @@
+.home {
+  .main-content {
+    text-align: center;
+    max-width: 50em;
+    margin: 1em auto 0;
+  }
+  .entry-content {
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.home-sections {
+  text-align: center;
+  .sub-section {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint($medium) {
+      flex-direction: row;
+    }
+
+    .sub-section-text {
+      order: 1;
+      flex: 1;
+      align-items: center;
+      @include breakpoint($medium) {
+        text-align: right;
+        display: flex;
+      }
+    }
+    .sub-section-image {
+      order: 0;
+      img {
+        margin-bottom: 1em;
+      }
+    }
+
+    &:nth-child(2n-1) {
+      @include breakpoint($medium) {
+        .sub-section-text {
+          text-align: left;
+        }
+        .sub-section-image {
+          order: 2;
+        }
+      }
+    }
+
+  }
+}

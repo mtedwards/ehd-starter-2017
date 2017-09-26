@@ -1,3 +1,75 @@
-.site-branding {
+.header-wrap {
+  background: #f9f9f9;
+  padding: 1em 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba($purple, 0.5);
+  .home & {
+    padding-bottom: 0;
+  }
+}
+
+.site-header {
+  @include breakpoint($nav) {
+    display: flex;
+  }
+  .site-branding {
+    h1, p {
+      margin: 0;
+    }
+    .site-description {
+      @extend .screen-reader-text;
+    }
+    .site-title a {
+      background: url('../img/hf-logo.svg') no-repeat;
+      background-size: contain;
+      text-indent: -1000px;
+      display: block;
+      transform-style: preserve-3d;
+      &::before {
+        content: "";
+        width: 1px;
+        margin-left: -1px;
+        float: left;
+        height: 0;
+        padding-top: 312px / 817px * 100%;
+      }
+      &::after { /* to clear float */
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+    @include breakpoint($medium) {
+      width: 50%;
+      margin: 0 auto;
+    }
+    @include breakpoint($nav) {
+      width: 320px;
+    }
+    .home & {
+      @include breakpoint($nav) {
+        display: none;
+      }
+    }
+  }
+  .main-navigation {
+    .menu-main-container {
+      height: 100%;
+      ul {
+        height: 100%;
+      }
+    }
+    @include breakpoint($medium) {
+      flex: 1;
+    }
+  }
+}
+
+.feature-bar {
   text-align: center;
+  color: white;
+  background: $purple;
+  padding: 1rem;
+  font-size: 1.8rem;
+  line-height: 1.3;
 }

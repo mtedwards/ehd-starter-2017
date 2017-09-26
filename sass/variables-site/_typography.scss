@@ -1,5 +1,19 @@
-$font__main: sans-serif;
+@font-face {
+    font-family: 'AvenirNextRegular';
+    src: url('../fonts/avenir-next-regular.eot');
+    src: url('../fonts/avenir-next-regular.eot') format('embedded-opentype'),
+         url('../fonts/avenir-next-regular.woff') format('woff'),
+         url('../fonts/avenir-next-regular.ttf') format('truetype'),
+         url('../fonts/avenir-next-regular.svg#AvenirNextLTW01RegularRegular') format('svg');
+}
+
+$font__main: AvenirNextRegular;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
+
+strong, bold {
+  letter-spacing:1px;
+  text-shadow: 1px 0 0 currentColor;
+}

@@ -1,0 +1,38 @@
+.home-header {
+  font-size: 0;
+  position: relative;
+  text-align: center;
+  @include breakpoint($nav) {
+    text-align: left;
+  }
+  .site-title {
+    display: none;
+    @include breakpoint($nav) {
+      display: block;
+      position: absolute;
+      top:0;
+      right: 0;
+      width: 55%;
+      height: 100%;
+      svg {
+        padding-top: 15%;
+      }
+    }
+    @include breakpoint(75em) {
+      width: 46.5rem;
+    }
+  }
+  h1 {
+    margin: 0;
+  }
+}
+//
+// .home .header-wrap .site {
+//   background: url('../img/heather-hero.jpg') no-repeat center bottom;
+//   background-size: contain;
+//   height: 100vh;
+//   @include breakpoint($medium) {
+//     height: auto;
+//     background-position: left bottom;
+//   }
+// }

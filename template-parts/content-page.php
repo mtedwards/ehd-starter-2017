@@ -10,18 +10,30 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php  if(! is_front_page() ) { ?>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
+	<?php } ?>
 
-	<div class="entry-content">
+	<div class="entry-content <?php if(has_post_thumbnail()) { echo 'with-sidebar'; }?>">
+		<div class="main-content">
+			<?php the_content(); ?>
+
 		<?php
-			the_content();
-
 			if( is_page( 'resources' ) ) {
 				get_template_part( 'template-parts/content', 'resources' );
+			} elseif( is_front_page() ) {
+				get_template_part( 'template-parts/content', 'home' );
 			}
 		?>
+		</div>
+		<?php if(has_post_thumbnail()) { ?>
+			<aside class="sidebar">
+				<?php the_post_thumbnail('large'); ?>
+			</aside>
+
+		<?php } ?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>

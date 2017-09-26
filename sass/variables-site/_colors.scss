@@ -1,21 +1,21 @@
-
+$purple: #2f324c;
 
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
-$color__background-button: tomato;
+$color__background-button: $purple;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 
-$color__text-screen: #21759b;
+$color__text-screen: #222222;
 $color__text-input: #666;
 $color__text-input-focus: #111;
-$color__link: royalblue;
-$color__link-visited: purple;
+$color__link: $purple;
+$color__link-visited: $purple;
 $color__link-hover: midnightblue;
-$color__text-main: #404040;
+$color__text-main: #222222;
 
-$color__border-button: tomato tomato tomato;
+$color__border-button: $purple $purple $purple;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;

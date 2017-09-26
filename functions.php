@@ -108,12 +108,12 @@ function ehd_starter_scripts() {
 
 	if (strpos($_SERVER['SERVER_NAME'],'.dev') !== false) {
 		/* DEV SITE */
-		 wp_register_style( 'ehd-starter-style', get_template_directory_uri() . '/build/style.css', array(), '2017411337', 'all' );
-		 wp_register_script( 'ehd-starter-script', get_template_directory_uri() . '/build/production.js', array('jquery'), '2017411337', true );
+		 wp_register_style( 'ehd-starter-style', get_template_directory_uri() . '/build/style.css', array(), '201708292053', 'all' );
+		 wp_register_script( 'ehd-starter-script', get_template_directory_uri() . '/build/production.js', array('jquery'), '201708292053', true );
 	} else {
 		/* NON DEV SITE */
-		wp_register_style( 'ehd-starter-style', get_template_directory_uri() . '/build/style.min.css', array(), '2017411337', 'all' );
-		wp_register_script( 'ehd-starter-script', get_template_directory_uri() . '/build/production.min.js', array('jquery'), '2017411337', true );
+		wp_register_style( 'ehd-starter-style', get_template_directory_uri() . '/build/style.min.css', array(), '201708292053', 'all' );
+		wp_register_script( 'ehd-starter-script', get_template_directory_uri() . '/build/production.min.js', array('jquery'), '201708292053', true );
 	}
 
 	wp_register_script( 'ehd-starter-modernizr', get_template_directory_uri() . '/build/modernizr-custom.min.js', array(), '3.3.1', false );
@@ -157,3 +157,9 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page();
+
+}
